@@ -4,8 +4,8 @@ Version:	1
 Release:	1%{?dist}
 Summary:	Permabit kernel module for logging
 License:	GPLv2
-URL:		http://www.permabit.com/
-Source0:	%{name}-%{version}.tgz
+URL:            https://gitlab.cee.redhat.com/vdo/open-sourcing/tools/permatest
+Source0:        %{url}/-/archive/main/%{name}-main.tar.gz
 Requires:       dkms
 Requires:       kernel-devel
 Requires:       make
