@@ -1,7 +1,7 @@
 %define  debug_package %{nil}
 Name:		permatest
 Version:	1
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Permabit kernel module for logging
 License:	GPLv2
 URL:            https://gitlab.cee.redhat.com/vdo/open-sourcing/tools/permatest
@@ -64,5 +64,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/modules-load.d/permatest.conf
 
 %changelog
+* Fri Apr 29 2022 Joseph Chapman <jochapma@redhat.com> 1-4
+- Use default_groups to specify attributes
+
 * Wed Jan 12 2022 Andy Walsh <awalsh@permabit.com> 1-1
 - Initial implementation
