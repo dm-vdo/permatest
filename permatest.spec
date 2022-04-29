@@ -14,7 +14,7 @@ Requires:       make
 Permabit kernel logging module for use during testing
 
 %prep
-%setup -q
+%setup -q -n %{name}-main
 
 %build
 # Nothing doing here, as we're going to build on whatever kernel we end up
