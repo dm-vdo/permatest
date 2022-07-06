@@ -1,7 +1,7 @@
 %define  debug_package %{nil}
 Name:		permatest
 Version:	2
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Permabit kernel module for logging
 License:	GPLv2
 URL:            https://gitlab.cee.redhat.com/vdo/open-sourcing/tools/permatest
@@ -9,6 +9,7 @@ Source0:        %{url}/-/archive/main/%{name}-main.tar.gz
 Requires:       dkms
 Requires:       kernel-devel
 Requires:       make
+BuildArch: 	noarch
 
 %description
 Permabit kernel logging module for use during testing
@@ -64,6 +65,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/modules-load.d/permatest.conf
 
 %changelog
+* Wed Jul 06 2022 Joe Shimkus <jshimkus@redhat.com> 2-2
+- Use noarch to support alternate architectures.
+
 * Fri Apr 29 2022 Joseph Chapman <jochapma@redhat.com> 2-1
 - Use default_groups to specify attributes
 
